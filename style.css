@@ -1,0 +1,92 @@
+/* COLOR PALETTE */
+:root {
+    --black: #011627;
+    --dark-blue: #14213d;
+    --light-grey: #8d99ae;
+    --almost-white: #edf2f4;
+    --wine: #8f0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--almost-white);
+    text-align: center;
+  }
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+nav {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+li {
+    margin: 0 20px;
+    color: var(--almost-white);
+    text-transform: uppercase;
+}
+
+#home-hero {
+    margin-top: -60px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    background: url('./media/gourmet.jpg') rgba(0,0,0,.5);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    line-height: 150%;
+    font-size: 96px;
+    text-align: center;
+    font-style: italic;
+    color: var(--wine);
+}
+
+.hero-title {
+    font-family: 'Castoro Titling', cursive;
+    font-size: 80px;
+    text-align: center;
+    text-transform: capitalize;
+
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: -72px;
+    text-align: center;
+    text-transform: uppercase;
+}
