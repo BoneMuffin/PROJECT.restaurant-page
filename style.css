@@ -1,6 +1,6 @@
 /* COLOR PALETTE */
 :root {
-    --black: #011627;
+    --black: #000000;
     --dark-blue: #14213d;
     --light-grey: #8d99ae;
     --almost-white: #edf2f4;
@@ -19,25 +19,16 @@
 #content {
     width: 100vw;
     height: 100vh;
-    background: url('./media/gourmet1.jpg');
-    background-size: cover;
-    background-position: center; 
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
  }
 
 nav {
+    background-color: var(--black);
     margin: 0 auto;
-    max-width: 1200px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 2px solid var(--almost-white)
  }
 
 ul {
@@ -53,6 +44,32 @@ li {
     margin: 0 20px;
     color: var(--almost-white);
     text-transform: uppercase;
+}
+
+li:hover {
+    border-bottom: 2px solid var(--almost-white);
+    padding-bottom: 4px;
+    cursor: pointer;
+  }
+
+
+#home {
+    height: 95vh;
+    background: url('./media/gourmet1.jpg')  rgba(1, 1, 1, 1)center center fixed;
+    background-size: auto;
+    background-size: cover;
+}
+
+.home-hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-hero h1 {
+    font-size: calc(3rem + 2vw);
+    text-align: center;
 }
 
 .subtitle {
@@ -85,4 +102,20 @@ hr {
 .title-subtext {
     text-align: center;
     font-size: 24px;
+}
+
+.btn-hero {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 16px;
+    background: var(--black);
+    border: none;
+    margin: 0 auto;
+    margin-top: 40px;
+    cursor: pointer;
+    color: var(--almost-white);
+}
+
+.btn-hero:hover {
+    color: var(--wine);
 }
