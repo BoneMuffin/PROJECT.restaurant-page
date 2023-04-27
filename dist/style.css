@@ -12,8 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: var(--almost-white);
-    text-align: center;
   }
 
 #content {
@@ -61,6 +59,7 @@ li:hover {
 }
 
 .home-hero {
+    color: var(--almost-white);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -104,18 +103,109 @@ hr {
     font-size: 24px;
 }
 
+.btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .btn-hero {
-    font-size: 20px;
+    text-decoration: none;
     text-transform: uppercase;
-    padding: 16px;
     background: var(--black);
-    border: none;
     margin: 0 auto;
-    margin-top: 40px;
     cursor: pointer;
     color: var(--almost-white);
+
+    padding: 8px 22px;
+    border-radius: 2px;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
 }
 
 .btn-hero:hover {
     color: var(--wine);
+}
+
+#menu {
+    background-color: var(--black);
+}
+
+.menu-container {
+    background-color: var(--almost-white);
+    width: 70%;
+    padding: 20px 20px 20px 20px;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#menu .hero {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.h-large {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: rgba(5,5,24,0.836);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+    justify-items: stretch;
+    padding: 0 10rem;
+    padding-top: 2rem;
+ }
+
+.h-medium {
+    text-transform: uppercase;
+    color: var(--wine);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.menu-item {
+    font-size: 1.4rem;
+    color: var(--black);
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-columns: max-content 1fr max-content;
+    grid-column-gap: 1rem;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.menu-item .underline {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 1rem;
+    background-color: rgba(61,61,60,0.2);
+  }
+
+.menu-detail {
+    font-size: 1.2rem;
+    color: rgba(61,61,60,0.705);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+
+.margin-top {
+    margin-top: 8rem;
 }
