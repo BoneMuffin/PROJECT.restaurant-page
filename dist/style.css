@@ -144,8 +144,20 @@ button {
 
     margin-bottom: 1rem;
     font-size: 3.5rem;
+    overflow: hidden;
+
+    background: linear-gradient(to right, var(--wine), var(--wine) 50%, var(--white) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
 }
 
+.header-title:hover {
+    background-position: 0 100%;
+}
 
 #home {
     height: 95vh;
