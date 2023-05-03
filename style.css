@@ -6,6 +6,7 @@
     --light-grey: #8d99ae;
     --white: #edf2f4;
     --wine: #8f0000;
+    --border-color: var(var(--black));
     --background-light: rgba(0, 0, 0, 0.6);
     --background-light-hover: rgba(99, 99, 99, 0.4);
     --background-dark: rgba(0, 0, 0, 0.9);
@@ -28,8 +29,8 @@
 body {
     font-family: 'Montserrat';
     font-size: 1.6rem;
-    background-image: url('images/gourmet1.jpg');
-    background-attachment: fixed;
+    background: url('./media/gourmet1.jpg') center;
+    background-size: auto;
     background-size: cover;
   }
 
@@ -96,6 +97,10 @@ footer a {
     text-decoration: none;
     color: white;
   }
+
+footer a:hover {
+    text-decoration: underline;
+}
   
 img {
     display: block;
@@ -159,19 +164,31 @@ button {
     background-position: 0 100%;
 }
 
+/* BODY */
+
+#main  {
+    max-width: 700px;
+    padding: 4rem;
+    margin: 6rem 0;
+    font-size: 2rem;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+}
+
 #home {
-    height: 95vh;
-    background: url('./media/gourmet1.jpg') bottom fixed;
-    background-size: auto;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 620px;
+    animation: fadeIn 1.5s;
 }
 
 .home-hero {
+    width: 50%;
     color: var(--white);
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .home-hero h1 {
@@ -229,6 +246,10 @@ hr {
     border-radius: 2px;
     font-size: 1.8rem;
     transition: 0.3s ease;
+}
+
+.btn-hero:hover {
+    color: var(--wine);
 }
 
 .btn-nav {
@@ -428,18 +449,24 @@ hr {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 31.25em) {
-    .menu-container {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 700px) {
+    #home,
+    #contact {
+      height: 100%;
+      width: 100%;
     }
-}
-
-@media only screen and (max-width: 31.25em) {
-    nav {
-    padding: 1rem 4rem;
-        padding-top: 1rem;
-    padding-top: 2rem;
-    width: 100%;
+  
+    #menu {
+      grid-template-columns: 1fr;
     }
-}
+  }
+  
+  @media (max-width: 500px) {
+    html {
+      font-size: 57.5%;
+    }
+  
+    #home img {
+      width: 80%;
+    }
+  }
