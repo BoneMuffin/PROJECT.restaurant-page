@@ -4,28 +4,38 @@
     --dark-blue: #14213d;
     --dark-grey: #495057;
     --light-grey: #8d99ae;
-    --gray: #e9ecef;
-    --almost-white: #edf2f4;
+    --white: #edf2f4;
     --wine: #8f0000;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-dark: rgba(0, 0, 0, 0.9);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
   }
 
-*, ::before, ::after {
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
 
-#content {
-    width: 100vw;
-    height: 100vh;
- }
+body {
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    background-image: url('images/gourmet1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+header {
+    font-size: 2.4rem;
+}
 
 nav {
     background-color: var(--black);
@@ -35,6 +45,14 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    top: 0;
+    right: 0;
+    padding: 1rem 8rem;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
  }
 
 ul {
@@ -48,7 +66,7 @@ ul {
 
 li {
     margin: 0 20px;
-    color: var(--almost-white);
+    color: var(--white);
     text-transform: uppercase;
 }
 
@@ -58,6 +76,67 @@ li:hover {
     cursor: pointer;
   }
 
+a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 24px;
+  }
+  
+footer a {
+    text-decoration: none;
+    color: white;
+  }
+  
+img {
+    display: block;
+    width: 100%;
+  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--background-dark);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 2.4rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+  }
+  
+
+.content {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+.header-title {
+    color: var(--white);
+    font-family: 'Castoro Titling', cursive;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+}
 
 #home {
     height: 95vh;
@@ -67,7 +146,7 @@ li:hover {
 }
 
 .home-hero {
-    color: var(--almost-white);
+    color: var(--white);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -123,7 +202,7 @@ hr {
     background: var(--black);
     margin: 0 auto;
     cursor: pointer;
-    color: var(--almost-white);
+    color: var(--white);
 
     padding: 8px 22px;
     border-radius: 2px;
@@ -131,9 +210,18 @@ hr {
     transition: 0.3s ease;
 }
 
-.btn-hero:hover {
-    color: var(--wine);
-}
+.btn-nav {
+    padding: 2rem;
+    transition: transform 0.3s;
+  }
+
+.btn-nav:hover {
+    transform: translateY(-10%);
+  }
+
+.btn-nav.active {
+    border-bottom: 2px solid var(--white);
+  }
 
 #menu .hero {
     margin-top: 3rem;
@@ -165,9 +253,7 @@ hr {
     justify-items: stretch;
     padding: 0 10rem;
     padding-top: 2rem;
-     
-    width: 70%;
-    margin: 5rem auto;
+
  }
 
 .h-medium {
@@ -182,7 +268,6 @@ hr {
     color: var(--black);
     text-transform: uppercase;
     display: grid;
-    grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
     grid-template-columns: max-content 1fr max-content;
     grid-column-gap: 1rem;
     justify-content: stretch;
@@ -315,22 +400,21 @@ hr {
     color: var(--dark-grey);
   }
 
-footer {
-    background-color: var(--black);
-    color: var(--almost-white);
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 31.25em) {
+    .menu-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    nav {
+    padding: 1rem 4rem;
+        padding-top: 1rem;
+    padding-top: 2rem;
     width: 100%;
-    padding: 1rem;
-    font-size: 24px;
-  }
-  
-footer a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
+    }
+}
