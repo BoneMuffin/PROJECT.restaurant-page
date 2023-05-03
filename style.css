@@ -16,6 +16,12 @@
     font-family: 'Montserrat', sans-serif;
   }
 
+*, ::before, ::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+
 #content {
     width: 100vw;
     height: 100vh;
@@ -55,7 +61,7 @@ li:hover {
 
 #home {
     height: 95vh;
-    background: url('./media/gourmet1.jpg')  rgba(1, 1, 1, 1)center center fixed;
+    background: url('./media/gourmet1.jpg') bottom fixed;
     background-size: auto;
     background-size: cover;
 }
@@ -79,6 +85,7 @@ li:hover {
     text-align: center;
     font-style: italic;
     color: var(--wine);
+    font-family: 'Pacifico', cursive;
 }
 
 .hero-title {
@@ -128,16 +135,6 @@ hr {
     color: var(--wine);
 }
 
-.menu-container {
-    background-color: var(--almost-white);
-    width: 70%;
-    padding: 20px 20px 20px 20px;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 #menu .hero {
     margin-top: 3rem;
     display: flex;
@@ -160,7 +157,7 @@ hr {
     color: rgba(5,5,24,0.836);
 }
 
-.menu-container {
+#menu .menu-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
@@ -168,6 +165,9 @@ hr {
     justify-items: stretch;
     padding: 0 10rem;
     padding-top: 2rem;
+     
+    width: 70%;
+    margin: 5rem auto;
  }
 
 .h-medium {
@@ -297,8 +297,20 @@ hr {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.5s;
+    margin: 1rem auto;
   }
 
 #contact .contact-container input[type="submit"]:hover {
     color: var(--wine);
 }
+
+#contact .contact-container .input-box span {
+    position: absolute;
+    left: 0;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    pointer-events: none;
+    transition: 0.3s;
+    color: var(--dark-grey);
+  }
