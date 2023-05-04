@@ -6,7 +6,7 @@
     --light-grey: #8d99ae;
     --white: #edf2f4;
     --wine: #8f0000;
-    --border-color: var(var(--black));
+    --border-color: #222;
     --background-light: rgba(0, 0, 0, 0.6);
     --background-light-hover: rgba(99, 99, 99, 0.4);
     --background-dark: rgba(0, 0, 0, 0.9);
@@ -225,7 +225,7 @@ button {
 
 hr {
     width: 280px;
-    border: 2px solid var(--almost-white);
+    border: 2px solid var(--wine);
     margin: 24px auto;
 }
 
