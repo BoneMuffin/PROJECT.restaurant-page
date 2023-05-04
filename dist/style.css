@@ -116,9 +116,12 @@ header {
     padding: 2rem;
     background-color: var(--black);
     border-bottom: 1px solid var(--border-color);
-    font-size: 2.4rem;
 
     box-shadow: 0 5px 5px 0 rgba(37, 37, 37, 0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+header h1 {
+  font-size: 2.4rem;
 }
 
 h1, h2, h3 {
@@ -168,7 +171,7 @@ button {
 
 /* BODY */
 
-#main  {
+.main  {
     max-width: 700px;
     padding: 4rem;
     margin: 6rem 0;
@@ -271,44 +274,50 @@ hr {
     border-bottom: 2px solid var(--white);
   }
 
+/* MENU */
+
 #menu .hero {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.h-large {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3.5rem;
-    margin: 1.5rem;
-    color: rgba(5,5,24,0.836);
+.menu-header .h-large {
+  color: var(--white);
 }
 
 #menu .menu-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 4rem;
-    grid-row-gap: 2rem;
-    justify-items: stretch;
-    padding: 0 10rem;
-    padding-top: 2rem;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;
  }
+
+ .h-large {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 1.5rem;
+  color: rgba(5,5,24,0.836);
+}
 
 .h-medium {
     text-transform: uppercase;
     color: var(--wine);
     font-size: 2.5rem;
     font-weight: 400;
+}
+
+.menu-section {
+  background-color: var(--white);
 }
 
 .menu-item {
@@ -320,7 +329,8 @@ hr {
     grid-column-gap: 1rem;
     justify-content: stretch;
     align-items: center;
-}
+
+} 
 
 .menu-item .underline {
     display: block;
@@ -340,6 +350,8 @@ hr {
 .margin-top {
     margin-top: 8rem;
 }
+
+/* CONTACT */
 
 #contact .hero {
     margin-top: 3rem;
