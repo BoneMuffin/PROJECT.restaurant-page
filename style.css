@@ -367,104 +367,53 @@ hr {
 }
 
 #contact h1 {
-    font-size: calc(3rem + 1vw);
-    color: var(--almost-white);
+    color: var(--white);
     position: relative;
+
+    display: flex;
+    text-transform: uppercase;
+    font-size: 2.5rem;
 }
 
 #contact {
-    background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  width: 620px;
+  animation: fadeIn 1.5s;
 }
 
 .contact-container {
     background-color: var(--gray);
 }
 
-#contact .contact-container {
-    width: 60%;
-    border-radius: 1.2rem;
-    padding: calc(2rem + 2vw);
-    margin: 2.5rem auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.fi-padding {
-    padding-bottom: 0em;
-  }
-
-#contact .info p {
-    text-align: justify;
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-  }
-
 #contact .info i {
     font-size: 1.5rem;
     padding-right: 1rem;
-    color: var(--black);
   }
 
-#contact .contact-container .input-box {
-    position: relative;
-    margin-top: 1rem;
+#contact p {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 10px;
   }
 
-#contact .contact-container .input-box span {
-    position: absolute;
-    left: 0;
-    padding: 0.5rem 0;
-    margin: 1rem 0;
-    font-size: 1.6rem;
-    pointer-events: none;
-    transition: 0.3s;
-    color: var(--light-grey);
+#contact img {
+    max-height: 420px;
+    padding: 1rem;
+    opacity: 90%;
   }
 
-#contact .contact-container .input-box input, #contact .contact-container .input-box textarea {
-    width: 98%;
-    padding: 0.5rem 0;
-    margin: 1rem 0;
-    font-size: 1.6rem;
-    border: none;
-    border-bottom-color: currentcolor;
-    border-bottom-style: none;
-    border-bottom-width: medium;
-    outline: none;
-    border-bottom: 2px solid var(--dark-grey);
-    resize: none;
-    background: rgba(243, 55, 55, 0);
-}
-
-#contact .contact-container input[type="submit"] {
-    width: 10rem;
-    font-size: 1.6rem;
-    background: var(--black);
-    padding: 8px 22px;
-    color: var(--almost-white);
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.5s;
-    margin: 1rem auto;
+img {
+    display: block;
+    width: 100%;
   }
 
-#contact .contact-container input[type="submit"]:hover {
-    color: var(--wine);
-}
-
-#contact .contact-container .input-box span {
-    position: absolute;
-    left: 0;
-    padding: 0.5rem 0;
-    margin: 1rem 0;
-    font-size: 1.6rem;
-    pointer-events: none;
-    transition: 0.3s;
-    color: var(--dark-grey);
-  }
 
 
 /* MEDIA QUERIES */
