@@ -186,12 +186,12 @@ button {
     align-items: center;
     justify-content: center;
     height: 525px;
-    width: 620px;
+    width: 618px;
     animation: fadeIn 1.5s;
 }
 
 .home-hero {
-    width: 50%;
+  width: 100%;
     color: var(--white);
     position: absolute;
 }
@@ -202,25 +202,21 @@ button {
 }
 
 .subtitle {
-    line-height: 150%;
     font-size: 96px;
     text-align: center;
-    font-style: italic;
     color: var(--wine);
     font-family: 'Pacifico', cursive;
 }
 
 .hero-title {
     font-family: 'Castoro Titling', cursive;
-    font-size: 80px;
-    text-align: center;
-    text-transform: capitalize;
-
     font-size: 64px;
     font-weight: bold;
     margin-top: -68px;
     text-align: center;
     text-transform: uppercase;
+
+    
 }
 
 hr {
