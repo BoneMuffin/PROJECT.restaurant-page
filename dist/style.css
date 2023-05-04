@@ -381,61 +381,35 @@ hr {
   align-items: center;
   justify-content: center;
   height: 525px;
-  width: 620px;
+  width: 100%;
   animation: fadeIn 1.5s;
-}
 
-.contact-container {
-    background-color: var(--gray);
 }
-
-#contact .info i {
-    font-size: 1.5rem;
-    padding-right: 1rem;
-  }
 
 #contact p {
-    width: 100%;
+    display: flex;
+    justify-content: center;
     color: var(--white);
     text-align: center;
-    width: 100%;
     padding: 0.5rem;
     margin: 10px;
   }
 
-#contact img {
-    max-height: 420px;
-    padding: 1rem;
-    opacity: 90%;
-  }
-
-img {
-    display: block;
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  #home,
+  #contact {
+    height: 100%;
     width: 100%;
   }
 
-
-
-/* MEDIA QUERIES */
-
-@media (max-width: 700px) {
-    #home,
-    #contact {
-      height: 100%;
-      width: 100%;
-    }
-  
-    #menu {
-      grid-template-columns: 1fr;
-    }
+  #menu {
+    grid-template-columns: 1fr;
   }
-  
-  @media (max-width: 500px) {
-    html {
-      font-size: 57.5%;
-    }
-  
-    #home img {
-      width: 80%;
-    }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 57.5%;
   }
+}
