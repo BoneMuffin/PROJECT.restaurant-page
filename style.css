@@ -180,13 +180,13 @@ button {
     border: 1px solid var(--border-color);
 }
 
-#home {
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 525px;
-    width: 618px;
+    width: 500px;
     animation: fadeIn 1.5s;
 }
 
