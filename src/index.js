@@ -1,6 +1,6 @@
 console.log('yello');
 
-import pageLoad from '.pageLoad';
+// tab-switching logic
+import initializeWebsite from "./initial-load";
 
-// load the page
-loadPage();
+initializeWebsite();
