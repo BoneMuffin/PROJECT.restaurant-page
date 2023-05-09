@@ -31,6 +31,9 @@ body {
     font-size: 1.6rem;
     background: url('./media/gourmet1.jpg') top;
     background-repeat: no-repeat;
+    /**/
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 header {
