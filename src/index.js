@@ -1,6 +1,6 @@
 console.log('yello');
 
-import pageLoad from './modules/initial-loadPage';
+import loadPage from './modules/initial-loadPage';
 import renderHome from './modules/home';
 import renderMenu from './modules/menu';
 import renderContact from './modules/contact';

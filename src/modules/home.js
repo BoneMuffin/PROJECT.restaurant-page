@@ -45,11 +45,11 @@ function createHomePageHero() {
     return home;
   }
   
-  function renderHome() {
+  function loadHome() {
     const main = document.getElementById("main");
     main.textContent = "";
     main.appendChild(createHomePageHero());
   }
   
-  export default renderHome;
+  export default loadHome;
   
