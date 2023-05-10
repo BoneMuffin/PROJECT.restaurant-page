@@ -1,6 +1,6 @@
-import loadHome from './home';
-import loadMenu from './menu';
-import loadContact from './contact';
+import renderHome from './home';
+import renderMenu from './menu';
+import renderContact from './contact';
 
 function createHeader() {
   const header = document.createElement('header');
@@ -16,7 +16,7 @@ function createHeader() {
   return header;
 }
 
-// event listeners for the nav
+// nav, header, footer are always present
 
 function createNav() {
   const nav = document.createElement('nav');

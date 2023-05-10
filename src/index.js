@@ -7,25 +7,22 @@ import renderContact from './modules/contact';
 
 initWebsite();
 
-// nav, header, footer are always present
-
-function createHeader() {
-
-};
-
-function createNav () {
-
-};
-
-function createFooter () {
-
-};
-
-
 // event listeners and tab-switching logic
 
-function initWebsite() {
+function addNavEvents() {
+    const homeBtn = document.getElementById('home');
+    const menuBtn = document.getElementById('menu');
+    const contactBtn = document.getElementById('contact');
+  
+    homeBtn.addEventListener('click', renderHome);
+    menuBtn.addEventListener('click', renderMenu);
+    contactBtn.addEventListener('click', renderContact);
+  }
 
+function initWebsite() {
+    loadPage();
+    renderHome();
+    addNavEvents();
 };
 
 export default initWebsite;
