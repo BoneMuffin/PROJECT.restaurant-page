@@ -1,9 +1,9 @@
 console.log('yello');
 
-import loadPage from './modules/initial-loadPage';
-import renderHome from './modules/home';
-import renderMenu from './modules/menu';
-import renderContact from './modules/contact';
+import { loadPage } from './modules/initial-loadPage';
+import { renderHome } from './modules/home';
+import { renderMenu } from './modules/menu';
+import { renderContact } from './modules/contact';
 
 initWebsite();
 
