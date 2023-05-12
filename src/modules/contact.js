@@ -47,4 +47,4 @@ function createContact() {
     main.appendChild(createContact())
   }
   
-  export default renderContact
+  export default renderContact;

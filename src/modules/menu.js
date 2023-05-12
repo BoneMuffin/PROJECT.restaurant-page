@@ -1,6 +1,4 @@
-/* METHOD 2 */
-  // create a new menu item
-  class Item {
+class Item {
     constructor(title, price, description) {
       this.title = title;
       this.price = price;
