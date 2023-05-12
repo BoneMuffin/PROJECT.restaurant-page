@@ -27,7 +27,7 @@ function createNav() {
   homeButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     setActiveButton(homeButton);
-    loadHome();
+    renderHome();
   });
 
   const menuButton = document.createElement('button');
@@ -36,7 +36,7 @@ function createNav() {
   menuButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     setActiveButton(menuButton);
-    loadMenu();
+    renderMenu();
   });
 
   const contactButton = document.createElement('button');
@@ -45,7 +45,7 @@ function createNav() {
   contactButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     setActiveButton(contactButton);
-    loadContact();
+    renderContact();
   });
 
   nav.appendChild(homeButton);
@@ -103,7 +103,7 @@ function loadPage() {
   content.appendChild(createFooter());
 
   setActiveButton(document.querySelector('.btn-nav'));
-  loadHome();
+  renderHome();
 }
 
 export default loadPage;
