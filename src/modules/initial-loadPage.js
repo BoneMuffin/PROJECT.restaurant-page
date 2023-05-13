@@ -77,20 +77,26 @@ function createMain() {
 function createFooter() {
   const footer = document.createElement('footer');
   footer.classList.add('footer');
+  const footerText = document.createElement('p');
 
-  const copyright = document.createElement('p');
-  copyright.textContent = `Built by BoneMuffin`;
+  // Text nodes
+  const text1 = document.createElement('p');
+  text1.textContent = `Built by`;
 
-  footer.appendChild(copyright);
+  const text2 = document.createElement('p');
+  text2.textContent = 'BoneMuffin';
 
+  // GitHub link
   const githubLink = document.createElement('a');
   githubLink.classList.add('footer-link');
   githubLink.target = '_blank';
   githubLink.setAttribute('href', 'https://github.com/BoneMuffin');
 
-  githubLink.appendChild(copyright);
-  footer.appendChild(copyright);
-  footer.appendChild(githubLink);
+
+  githubLink.appendChild(text2);
+  footerText.appendChild(text1);
+  footerText.appendChild(githubLink);
+  footer.appendChild(footerText);
 
   return footer;
 }

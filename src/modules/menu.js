@@ -71,20 +71,16 @@ class Item {
 
       const itemName = document.createElement('span');
       itemName.classList.add('item-name');
-      itemText.appendChild(itemHeader);
-
-     /* const itemTitle = document.createElement('span4');
-      itemTitle.textContent = item.title;
-      itemHeader.appendChild(itemTitle); */
+      itemText.appendChild(itemName);
 
       const itemDeco = document.createElement('span');
       itemDeco.classList.add('item-deco');
-      itemHeader.appendChild(itemDeco);
+      itemName.appendChild(itemDeco);
 
       const itemPrice = document.createElement('span');
       itemPrice.classList.add('price');
       itemPrice.textContent = item.price;
-      itemHeader.appendChild(itemPrice);
+      itemName.appendChild(itemPrice);
 
       const itemDescription = document.createElement('p');
       itemDescription.classList.add('idescription');
@@ -95,8 +91,8 @@ class Item {
 
 
 function renderMenu() {
-    const main = document.getElementById("main");
-    main.textContent = "";
+    const main = document.getElementById('main');
+    main.textContent = '';
     main.appendChild(createMenu());
   }
   
@@ -106,11 +102,12 @@ export default renderMenu;
 /* method two? 
 
  function createMenu() {
-  const menu = document.createElement("div");
+  const menu = document.createElement('div");
   menu.classList.add("menu");
 
  menu.appendChild(
-    createMenuItem(
+    createMenu
+    (
       "Salsiccia",
       "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil"
     )

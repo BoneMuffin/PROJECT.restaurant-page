@@ -1,6 +1,7 @@
 function createHomePageHero() {
     const home = document.createElement('div');
     home.classList.add('home');
+    
 
     // Create hero and append title and subtitle
     const homeHero = document.createElement('div');
@@ -12,42 +13,42 @@ function createHomePageHero() {
     subtitle.classList.add = ('subtitle');
     subtitle.textContent = 'This is';
 
-    home.appendChild(subtitle);
+    subtitle.appendTo(homeHero);
 
     const heroTitle = document.createElement('h1');
     heroTitle.classList.add('hero-title');
     heroTitle.textContent = 'Gourmet Madness';
 
-    home.appendChild(heroTitle);
+    homeHero.appendChild(heroTitle);
 
     const redLine = document.createElement('hr');
     redLine.classList.add('line');
 
-    home.appendChild(redLine);
+    homeHero.appendChild(redLine);
 
     const titleSubtext = document.createElement('p');
     titleSubtext.classList.add('title-subtext');
     titleSubtext.textContent = 'Elevate your palate';
 
-    home.appendChild(titleSubtext);
+    homeHero.appendChild(titleSubtext);
 
     const heroBtnDiv = document.createElement('div');
     heroBtnDiv.classList.add('btn-container');
 
-    home.appendChild(heroBtnDiv);
+    homeHero.appendChild(heroBtnDiv);
 
     const heroBtn = document.createElement('button');
     heroBtn.classList.add('btn-hero');
     heroBtn.textContent = 'Begin';
 
-    home.appendChild(heroBtn);
+    homeHero.appendChild(heroBtn);
   
     return home;
   }
   
   function renderHome() {
-    const main = document.getElementById("main");
-    main.textContent = "";
+    const main = document.getElementById('main');
+    main.textContent = '';
     main.appendChild(createHomePageHero());
   }
   
