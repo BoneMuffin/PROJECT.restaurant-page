@@ -13,7 +13,7 @@ function createHomePageHero() {
     subtitle.classList.add = ('subtitle');
     subtitle.textContent = 'This is';
 
-    subtitle.appendTo(homeHero);
+    subtitle.appendChild(homeHero);
 
     const heroTitle = document.createElement('h1');
     heroTitle.classList.add('hero-title');

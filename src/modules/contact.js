@@ -1,8 +1,8 @@
 function createContact() {
-    const contact = document.createElement('div')
-    contact.classList.add('contact')
+    const contact = document.createElement('div');
+    contact.classList.add('contact');
   
-    const locationHeader = document.createElement('h3')
+    const locationHeader = document.createElement('h3');
     locationHeader.classList.add = ('h-medium');
     locationHeader.textContent = 'Location';
     
@@ -29,23 +29,22 @@ function createContact() {
     const email = createElement('p');
     email.textContent = 'sorrynotreal@hotdog.com';
 
-    contact.appendChild(locationHeader)
-    contact.appendChild(location)
-    contact.appendChild(hoursHeader)
-    contact.appendChild(days)
-    contact.appendChild(hours)
-    contact.appendChild(contactHeader)
-    contact.appendChild(phone)
-    contact.appendChild(email)
+    contact.appendChild(locationHeader);
+    contact.appendChild(location);
+    contact.appendChild(hoursHeader);
+    contact.appendChild(days);
+    contact.appendChild(hours);
+    contact.appendChild(contactHeader);
+    contact.appendChild(phone);
+    contact.appendChild(email);
   
     return contact
   }
   
   function renderContact() {
-    const main = document.getElementById('main')
-    main.textContent = ''
-    main.appendChild(createContact())
+    const main = document.getElementById('main');
+    main.textContent = '';
+    main.appendChild(createContact());
   }
   
   export default renderContact;
-  
