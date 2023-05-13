@@ -80,11 +80,8 @@ function createFooter() {
   const footerText = document.createElement('p');
 
   // Text nodes
-  const text1 = document.createElement('p');
-  text1.textContent = `Built by`;
-
-  const text2 = document.createElement('p');
-  text2.textContent = 'BoneMuffin';
+  const text1 = document.createTextNode('Built by ');
+  const text2 = document.createTextNode('BoneMuffin');
 
   // GitHub link
   const githubLink = document.createElement('a');
