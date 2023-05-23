@@ -4,7 +4,7 @@ class Item {
       this.price = price;
       this.description = description;
     }
-  }
+  };
 
   const item1 = new Item(
     'Carbonara',
@@ -87,39 +87,13 @@ class Item {
       itemDescription.textContent = item.description;
       itemText.appendChild(itemDescription);
     });
-  }
-
+  };
 
 function renderMenu() {
     const main = document.getElementById('main');
     main.textContent = '';
     main.appendChild(createMenu());
-  }
+  };
   
 export default renderMenu;
 
-
-/* method two? 
-
- function createMenu() {
-  const menu = document.createElement('div");
-  menu.classList.add("menu");
-
- menu.appendChild(
-    createMenu
-    (
-      "Salsiccia",
-      "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil"
-    )
-  );
-
-    return menu;
-}
-   
-function loadMenu() {
-  const main = document.getElementById("main");
-  main.textContent = "";
-  main.appendChild(createMenu());
-}
-
-export default loadMenu; */
