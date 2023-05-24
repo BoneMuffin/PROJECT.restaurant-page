@@ -1,8 +1,9 @@
 function createHomePageHero() {
+  
     const home = document.createElement('div');
     home.classList.add('home');
     
-    // Create hero and append title and subtitle
+    // append title and subtitle
     const homeHero = document.createElement('div');
     homeHero.classList.add('home-hero');
     home.appendChild(homeHero);
@@ -37,12 +38,12 @@ function createHomePageHero() {
   
     return home;
   }
-  
-  function renderHome() {
+
+function renderHome() {
     const main = document.getElementById('main');
     main.textContent = '';
     main.appendChild(createHomePageHero());
   }
   
-  export default renderHome;
+export default renderHome;
   

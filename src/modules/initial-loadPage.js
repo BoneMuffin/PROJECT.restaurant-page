@@ -7,7 +7,7 @@ function createHeader() {
   header.classList.add('header');
 
   const headerTitle = document.createElement('h1');
-  headerTitle.classList.add('restaurant-name');
+  headerTitle.classList.add('header-title');
   headerTitle.textContent = 'Gourmet Madness';
 
   header.appendChild(headerTitle);
@@ -88,7 +88,6 @@ function createFooter() {
   githubLink.classList.add('footer-link');
   githubLink.target = '_blank';
   githubLink.setAttribute('href', 'https://github.com/BoneMuffin');
-
 
   githubLink.appendChild(text2);
   footerText.appendChild(text1);

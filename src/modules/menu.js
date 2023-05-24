@@ -61,6 +61,7 @@ class Item {
     menu.classList.add("menu");
     
     menuItems.forEach(item => {
+
       const itemContainer = document.createElement('div');
       itemContainer.classList.add('menu-section');
       menu.appendChild(itemContainer);
@@ -83,7 +84,7 @@ class Item {
       itemName.appendChild(itemPrice);
 
       const itemDescription = document.createElement('p');
-      itemDescription.classList.add('idescription');
+      itemDescription.classList.add('description');
       itemDescription.textContent = item.description;
       itemText.appendChild(itemDescription);
     });

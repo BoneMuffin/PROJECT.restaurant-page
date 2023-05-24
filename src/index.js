@@ -5,7 +5,7 @@ import renderHome from './modules/home';
 import renderMenu from './modules/menu';
 import renderContact from './modules/contact';
 
-initWebsite();
+loadPage();
 
 // event listeners and tab-switching logic
 
