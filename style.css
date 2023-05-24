@@ -217,7 +217,7 @@ button {
 }
 
 .home-hero {
-  width: 100%;
+    width: 100%;
     color: var(--white);
     position: absolute;
 }
@@ -242,8 +242,6 @@ button {
     margin-top: -68px;
     text-align: center;
     text-transform: uppercase;
-
-    
 }
 
 .line {
