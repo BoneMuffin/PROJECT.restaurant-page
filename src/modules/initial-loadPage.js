@@ -71,6 +71,7 @@ function createMain() {
   const main = document.createElement('main');
   main.classList.add('main');
   main.setAttribute('id', 'main');
+  
   return main;
 }
 
@@ -97,7 +98,7 @@ function createFooter() {
   return footer;
 }
 
-function loadPage() {
+function initWebsite() {
   const content = document.getElementById('content');
 
   content.appendChild(createHeader());
@@ -108,4 +109,4 @@ function loadPage() {
   renderHome();
 }
 
-export default loadPage;
+export default initWebsite;

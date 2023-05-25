@@ -1,9 +1,11 @@
 console.log('yello');
 
-import loadPage from './modules/initial-loadPage';
+import initWebsite from './modules/initial-loadPage';
 import renderHome from './modules/home';
 import renderMenu from './modules/menu';
 import renderContact from './modules/contact';
+
+initWebsite();
 
 // event listeners and tab-switching logic
 
@@ -15,13 +17,12 @@ function addNavEvents() {
     homeBtn.addEventListener('click', renderHome);
     menuBtn.addEventListener('click', renderMenu);
     contactBtn.addEventListener('click', renderContact);
-  }
+  };
 
+  /*
 function initWebsite() {
     loadPage();
     renderHome();
     addNavEvents();
 };
-
-export default initWebsite;
-initWebsite();
+*/
