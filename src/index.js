@@ -5,8 +5,6 @@ import renderHome from './modules/home';
 import renderMenu from './modules/menu';
 import renderContact from './modules/contact';
 
-loadPage();
-
 // event listeners and tab-switching logic
 
 function addNavEvents() {
@@ -26,3 +24,4 @@ function initWebsite() {
 };
 
 export default initWebsite;
+initWebsite();
