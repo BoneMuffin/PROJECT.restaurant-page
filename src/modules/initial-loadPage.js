@@ -2,6 +2,8 @@ import renderHome from './home';
 import renderMenu from './menu';
 import renderContact from './contact';
 
+// create header
+
 function createHeader() {
   const header = document.createElement('header');
   header.classList.add('header');
@@ -16,7 +18,7 @@ function createHeader() {
   return header;
 }
 
-// nav, header, footer are always present
+// create nav that is always present
 
 function createNav() {
   const nav = document.createElement('nav');
@@ -55,6 +57,8 @@ function createNav() {
   return nav;
 }
 
+// add colored underline to active button
+
 function setActiveButton(button) {
   const buttons = document.querySelectorAll('.btn-nav');
 
@@ -65,7 +69,7 @@ function setActiveButton(button) {
   });
 
   button.classList.add('active');
-}
+};
 
 function createMain() {
   const main = document.createElement('main');
@@ -73,7 +77,7 @@ function createMain() {
   main.setAttribute('id', 'main');
   
   return main;
-}
+};
 
 function createFooter() {
   const footer = document.createElement('footer');
@@ -96,7 +100,19 @@ function createFooter() {
   footer.appendChild(footerText);
 
   return footer;
-}
+};
+
+// event listeners and tab-switching logic
+
+function addNavEvents() {
+  const homeBtn = document.getElementById('home');
+  const menuBtn = document.getElementById('menu');
+  const contactBtn = document.getElementById('contact');
+
+  homeBtn.addEventListener('click', renderHome);
+  menuBtn.addEventListener('click', renderMenu);
+  contactBtn.addEventListener('click', renderContact);
+};
 
 function initWebsite() {
   const content = document.getElementById('content');
@@ -107,6 +123,14 @@ function initWebsite() {
 
   setActiveButton(document.querySelector('.btn-nav'));
   renderHome();
-}
+  addNavEvents();
+};
 
 export default initWebsite;
+
+/*  write this initial page-load function inside of its own 
+module and then import and call it inside of index.js.
+
+Write the tab-switching logic inside of index.js.
+ You should have event listeners for each tab that wipes out the current 
+contents and then runs the correct ‘tab module’ to populate it again. */
