@@ -7,8 +7,7 @@ import renderContact from './modules/contact';
 
 initWebsite();
 
-// event listeners and tab-switching logic
-
+  /*
 function addNavEvents() {
     const homeBtn = document.getElementById('home');
     const menuBtn = document.getElementById('menu');
@@ -19,7 +18,7 @@ function addNavEvents() {
     contactBtn.addEventListener('click', renderContact);
   };
 
-  /*
+
 function initWebsite() {
     loadPage();
     renderHome();
