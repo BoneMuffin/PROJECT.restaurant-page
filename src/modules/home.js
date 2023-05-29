@@ -1,11 +1,8 @@
-          // e //
 function createHomepage() {
     const home = document.createElement('div');
     home.classList.add('home');
     
     // append title and subtitle
-
-          // t //
     const homeHero = document.createElement('div');
     homeHero.classList.add('home-hero');
     home.appendChild(homeHero);
@@ -37,15 +34,15 @@ function createHomepage() {
     const heroBtn = document.createElement('button');
     heroBtn.classList.add('btn-hero');
     heroBtn.textContent = 'Begin';
-    homeHero.appendChild(heroBtn);
+    heroBtnDiv.appendChild(heroBtn);
   
     return home;
   }
 
 function renderHome() {
-    const main = document.getElementById('main');
-    main.textContent = '';
-    main.appendChild(createHomepage());
+  const mainElement = document.getElementById('main');
+  mainElement.textContent = '';
+  mainElement.appendChild(createHomepage());
 };
   
 export default renderHome;
