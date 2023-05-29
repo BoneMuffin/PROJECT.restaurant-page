@@ -1,5 +1,5 @@
 function createHomepage() {
-  
+    const main = document.getElementById('main');
     const home = document.createElement('div');
     home.classList.add('home');
     
