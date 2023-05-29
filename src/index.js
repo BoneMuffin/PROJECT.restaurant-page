@@ -1,9 +1,6 @@
 console.log('yello');
 
 import initWebsite from './modules/initial-loadPage';
-import renderHome from './modules/home';
-import renderMenu from './modules/menu';
-import renderContact from './modules/contact';
 
 initWebsite();
 

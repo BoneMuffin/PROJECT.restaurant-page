@@ -15,10 +15,10 @@ function createHeader() {
   header.appendChild(headerTitle);
   header.appendChild(createNav());
 
-  return header;
-}
+  return header
+};
 
-// create nav that is always present
+// create nav that is always present, tab-switching logic
 
 function createNav() {
   const nav = document.createElement('nav');
@@ -55,7 +55,7 @@ function createNav() {
   nav.appendChild(contactButton);
 
   return nav;
-}
+};
 
 // add colored underline to active button
 
@@ -102,7 +102,7 @@ function createFooter() {
   return footer;
 };
 
-// event listeners and tab-switching logic
+// event listeners for each tab
 
 function addNavEvents() {
   const homeBtn = document.getElementById('home');
@@ -127,10 +127,3 @@ function initWebsite() {
 };
 
 export default initWebsite;
-
-/*  write this initial page-load function inside of its own 
-module and then import and call it inside of index.js.
-
-Write the tab-switching logic inside of index.js.
- You should have event listeners for each tab that wipes out the current 
-contents and then runs the correct ‘tab module’ to populate it again. */
