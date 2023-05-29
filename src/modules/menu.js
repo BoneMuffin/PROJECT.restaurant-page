@@ -57,8 +57,8 @@ class Item {
   const menuItems = [item1, item2, item3, item4, item5, item6, item7, item8];
 
   function createMenu() {
-    const menu = document.createElement("div");
-    menu.classList.add("menu");
+    const menu = document.createElement('div');
+    menu.classList.add('menu');
     
     menuItems.forEach(item => {
 

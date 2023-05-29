@@ -1,4 +1,4 @@
-function createHomePageHero() {
+function createHomepage() {
   
     const home = document.createElement('div');
     home.classList.add('home');
@@ -9,7 +9,7 @@ function createHomePageHero() {
     home.appendChild(homeHero);
 
     const subtitle = document.createElement('p');
-    subtitle.classList.add = ('subtitle');
+    subtitle.classList.add('subtitle');
     subtitle.textContent = 'This is';
     subtitle.appendChild(homeHero);
 
@@ -42,8 +42,8 @@ function createHomePageHero() {
 function renderHome() {
     const main = document.getElementById('main');
     main.textContent = '';
-    main.appendChild(createHomePageHero());
-  }
+    main.appendChild(createHomepage());
+};
   
 export default renderHome;
   

@@ -3,7 +3,7 @@ function createContact() {
   contact.classList.add('contact');
   
     const locationHeader = document.createElement('h3');
-    locationHeader.classList.add = ('h-medium');
+    locationHeader.classList.add('h-medium');
     locationHeader.textContent = 'Location';
     contact.appendChild(locationHeader);
 
@@ -12,7 +12,7 @@ function createContact() {
     contact.appendChild(location);
 
     const hoursHeader = document.createElement('h3');
-    hoursHeader.classList.add = ('h-medium');
+    hoursHeader.classList.add('h-medium');
     hoursHeader.textContent = 'Opening hours';
     contact.appendChild(hoursHeader);
 
