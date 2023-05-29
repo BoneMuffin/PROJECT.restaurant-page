@@ -3,6 +3,7 @@ import renderMenu from './menu';
 import renderContact from './contact';
 
 // create header
+const content = document.getElementById('content');
 
 function createHeader() {
   const header = document.createElement('header');
@@ -115,8 +116,6 @@ function addNavEvents() {
 };
 
 function initWebsite() {
-  const content = document.getElementById('content');
-
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());

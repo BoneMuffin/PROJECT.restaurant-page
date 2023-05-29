@@ -1,17 +1,20 @@
+          // e //
 function createHomepage() {
-    const main = document.getElementById('main');
     const home = document.createElement('div');
     home.classList.add('home');
     
     // append title and subtitle
+
+          // t //
     const homeHero = document.createElement('div');
     homeHero.classList.add('home-hero');
     home.appendChild(homeHero);
 
+            // n //
     const subtitle = document.createElement('p');
     subtitle.classList.add('subtitle');
     subtitle.textContent = 'This is';
-    subtitle.appendChild(homeHero);
+    homeHero.appendChild(subtitle);
 
     const heroTitle = document.createElement('h1');
     heroTitle.classList.add('hero-title');
