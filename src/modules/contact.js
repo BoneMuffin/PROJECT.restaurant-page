@@ -24,7 +24,7 @@ function createContact() {
     hours.textContent = '10am - 4 pm | 6pm - 11pm';
     contact.appendChild(hours);
 
-    const contactHeader = createElement('h3');
+    const contactHeader = document.createElement('h3');
     contactHeader.classList.add('h-medium');
     contactHeader.textContent = 'Contact';
     contact.appendChild(contactHeader);
