@@ -7,7 +7,6 @@ function createHomepage() {
     homeHero.classList.add('home-hero');
     home.appendChild(homeHero);
 
-            // n //
     const subtitle = document.createElement('p');
     subtitle.classList.add('subtitle');
     subtitle.textContent = 'This is';

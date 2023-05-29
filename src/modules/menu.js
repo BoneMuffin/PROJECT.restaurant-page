@@ -49,6 +49,8 @@ function createMenu() {
       itemDescription.textContent = item.description;
       itemText.appendChild(itemDescription);
     })
+
+    return menu
 };
 
 function renderMenu() {
