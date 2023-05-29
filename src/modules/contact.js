@@ -29,11 +29,11 @@ function createContact() {
     contactHeader.textContent = 'Contact';
     contact.appendChild(contactHeader);
 
-    const phone = createElement('p');
+    const phone = document.createElement('p');
     phone.textContent = '(333)-444 555';
     contact.appendChild(phone);
 
-    const email = createElement('p');
+    const email = document.createElement('p');
     email.textContent = 'sorrynotreal@hotdog.com';
     contact.appendChild(email);
   
