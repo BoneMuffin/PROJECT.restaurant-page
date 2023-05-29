@@ -1,20 +1,20 @@
-class Item {
-    constructor(title, price, description) {
-      this.title = title;
-      this.price = price;
-      this.description = description;
-    }
+class MenuItem {
+  constructor(title, price, description) {
+    this.title = title;
+    this.price = price;
+    this.description = description;
+  }
 };
 
 const menuItems = [
-    new Item('Carbonara', '$30', 'spaghetti + bacon + garlic + eggs + Parmesan'),
-    new Item('Simple Lamb Ragù', '$24', 'ground lamb + red wine  + thyme + rosemary + pappardelle'),
-    new Item('Antipasto Salad', '$25', 'cured meat + marinated vegetables + cheese'),
-    new Item('Wedding Soup', '$28', 'umini chicken meatballs + little pasta nuggets + vegetables'),
-    new Item('Concord Grape Granita', '$12', 'Concord grape juice + sugar + water'),
-    new Item('Tiramisu Icebox Pie', '$15', 'ladyfingers + coffee + mascarpone'),
-    new Item('Campari', '$7','pink grapefruit juice + blood orange slice + herbs'),
-    new Item('Bellini', '$10', 'puréed white peaches + Prosecco')
+    new MenuItem('Carbonara', '$30', 'spaghetti + bacon + garlic + eggs + Parmesan'),
+    new MenuItem('Simple Lamb Ragù', '$24', 'ground lamb + red wine  + thyme + rosemary + pappardelle'),
+    new MenuItem('Antipasto Salad', '$25', 'cured meat + marinated vegetables + cheese'),
+    new MenuItem('Wedding Soup', '$28', 'umini chicken meatballs + little pasta nuggets + vegetables'),
+    new MenuItem('Concord Grape Granita', '$12', 'Concord grape juice + sugar + water'),
+    new MenuItem('Tiramisu Icebox Pie', '$15', 'ladyfingers + coffee + mascarpone'),
+    new MenuItem('Campari', '$7','pink grapefruit juice + blood orange slice + herbs'),
+    new MenuItem('Bellini', '$10', 'puréed white peaches + Prosecco')
 ];
 
 function createMenu() {
@@ -48,14 +48,14 @@ function createMenu() {
       itemDescription.classList.add('description');
       itemDescription.textContent = item.description;
       itemText.appendChild(itemDescription);
-    });
-  };
+    })
+};
 
 function renderMenu() {
     const main = document.getElementById('main');
     main.textContent = '';
     main.appendChild(createMenu());
-  };
+};
   
 export default renderMenu;
 
