@@ -116,9 +116,9 @@ function addNavEvents() {
 };
 
 function initWebsite() {
-  content.appendChild(createHeader());
-  content.appendChild(createMain());
-  content.appendChild(createFooter());
+  content.appendChild((createHeader()));
+  content.appendChild((createMain()));
+  content.appendChild((createFooter()));
 
   setActiveButton(document.querySelector('.btn-nav'));
   renderHome();
