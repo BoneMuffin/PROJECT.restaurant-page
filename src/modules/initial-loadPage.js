@@ -20,7 +20,6 @@ function createHeader() {
 };
 
 // create nav that is always present, tab-switching logic
-
 function createNav() {
   const nav = document.createElement('nav');
 
@@ -59,16 +58,14 @@ function createNav() {
 };
 
 // add colored underline to active button
-
 function setActiveButton(button) {
   const buttons = document.querySelectorAll('.btn-nav');
 
   buttons.forEach((button) => {
     if (button !== this) {
-      button.classList.remove('active');
+      button.classList.remove("active");
     }
   });
-
   button.classList.add('active');
 };
 
@@ -104,7 +101,6 @@ function createFooter() {
 };
 
 // event listeners for each tab
-
 function addNavEvents() {
   const homeBtn = document.getElementById('home');
   const menuBtn = document.getElementById('menu');
