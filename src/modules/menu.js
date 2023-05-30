@@ -21,8 +21,20 @@ function createMenu() {
     const menu = document.createElement('div');
     menu.classList.add('menu');
     
-    menuItems.forEach(item => {
+    const menuHero = document.createElement('div');
+    menuHero.classList.add('hero');
+    menu.appendChild(menuHero);
 
+    const menuHeader = document.createElement('div');
+    menuHeader.classList.add('menu-header');
+    menu.appendChild(menuHeader);
+
+    const title = document.createElement('h1');
+    title.classList.add('h-large');
+    title.textContent = 'Menu';
+    menuHeader.appendChild(title);
+
+    menuItems.forEach(item => {
       const itemContainer = document.createElement('div');
       itemContainer.classList.add('menu-section');
       menu.appendChild(itemContainer);
