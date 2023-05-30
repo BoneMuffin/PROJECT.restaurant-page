@@ -18,6 +18,7 @@ const menuItems = [
 ];
 
 function createMenu() {
+    // adding title before displaying the menu
     const menu = document.createElement('div');
     menu.classList.add('menu');
     
@@ -34,6 +35,7 @@ function createMenu() {
     title.textContent = 'Menu';
     menuHeader.appendChild(title);
 
+    // create menu
     menuItems.forEach(item => {
       const itemContainer = document.createElement('div');
       itemContainer.classList.add('menu-section');
@@ -60,9 +62,17 @@ function createMenu() {
       itemDescription.classList.add('description');
       itemDescription.textContent = item.description;
       itemText.appendChild(itemDescription);
-    })
+    });
 
     return menu
+
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menu-container');
+    menuContainer.appendChild(menu);
+
+    const menuTitle = document.createElement('h3');
+    menuTitle.classList.add('h-medium');
+    menuContainer.appendChild(menuTitle);
 };
 
 function renderMenu() {
