@@ -35,6 +35,15 @@ function createMenu() {
     title.textContent = 'Menu';
     menuHeader.appendChild(title);
 
+    // create the container for the menu
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menu-container');
+    menuContainer.appendChild(menu);
+
+    const menuTitle = document.createElement('h3');
+    menuTitle.classList.add('h-medium');
+    menuContainer.appendChild(menuTitle);
+
     // create menu
     menuItems.forEach(item => {
       const itemContainer = document.createElement('div');
@@ -65,14 +74,6 @@ function createMenu() {
     });
 
     return menu
-
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menu-container');
-    menuContainer.appendChild(menu);
-
-    const menuTitle = document.createElement('h3');
-    menuTitle.classList.add('h-medium');
-    menuContainer.appendChild(menuTitle);
 };
 
 function renderMenu() {
