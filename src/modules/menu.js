@@ -17,12 +17,6 @@ const menuItems = [
     new MenuItem('Bellini', '$10', 'puréed white peaches + Prosecco')
 ];
 
-function renderMenu() {
-  const main = document.getElementById('main');
-  main.textContent = '';
-  main.appendChild(createMenu());
-}
-
 function createMenu() {
   const menuDiv = document.createElement("div");
   menuDiv.classList.add("menu");
@@ -44,46 +38,73 @@ function createMenu() {
   const menuContainerDiv = document.createElement("div");
   menuContainerDiv.classList.add("menu-container");
 
-  const mainCourseH3 = document.createElement("h3");
-  mainCourseH3.classList.add("h-medium");
-  mainCourseH3.textContent = "Main course";
+  const sections = [
+    {
+      title: "Main course",
+      items: menuItems.slice(0, 2),
+    },
+    {
+      title: "Soups & salads",
+      items: menuItems.slice(2, 4),
+    },
+    {
+      title: "Desserts",
+      items: menuItems.slice(4, 6),
+    },
+    {
+      title: "Drinks",
+      items: menuItems.slice(6, 8),
+    },
+  ];
 
-  menuContainerDiv.appendChild(mainCourseH3);
+  sections.forEach((section) => {
+    const sectionH3 = document.createElement("h3");
+    sectionH3.classList.add("h-medium");
+    sectionH3.textContent = section.title;
 
-  const mainCourseSectionDiv = document.createElement("div");
-  mainCourseSectionDiv.classList.add("menu-section");
+    const sectionDiv = document.createElement("div");
+    sectionDiv.classList.add("menu-section");
 
-  menuItems.forEach((menuItem) => {
-    const menuItemDiv = document.createElement("div");
-    menuItemDiv.classList.add("menu-item");
+    section.items.forEach((menuItem) => {
+      const menuItemP = document.createElement("p");
+      menuItemP.classList.add("menu-item");
 
-    const itemNameSpan = document.createElement("span");
-    itemNameSpan.classList.add("item-name");
-    itemNameSpan.textContent = menuItem.title;
+      const itemNameSpan = document.createElement("span");
+      itemNameSpan.classList.add("item-name");
+      itemNameSpan.textContent = menuItem.title;
 
-    const itemDecoSpan = document.createElement("span");
-    itemDecoSpan.classList.add("item-deco");
+      const itemDecoSpan = document.createElement("span");
+      itemDecoSpan.classList.add("item-deco");
 
-    const priceSpan = document.createElement("span");
-    priceSpan.classList.add("price");
-    priceSpan.textContent = menuItem.price;
+      const priceSpan = document.createElement("span");
+      priceSpan.classList.add("price");
+      priceSpan.textContent = menuItem.price;
 
-    menuItemDiv.appendChild(itemNameSpan);
-    menuItemDiv.appendChild(itemDecoSpan);
-    menuItemDiv.appendChild(priceSpan);
+      menuItemP.appendChild(itemNameSpan);
+      menuItemP.appendChild(itemDecoSpan);
+      menuItemP.appendChild(priceSpan);
 
-    const descriptionP = document.createElement("p");
-    descriptionP.classList.add("description");
-    descriptionP.textContent = menuItem.description;
+      const descriptionP = document.createElement("p");
+      descriptionP.classList.add("description");
+      descriptionP.textContent = menuItem.description;
 
-    mainCourseSectionDiv.appendChild(menuItemDiv);
-    mainCourseSectionDiv.appendChild(descriptionP);
+      sectionDiv.appendChild(menuItemP);
+      sectionDiv.appendChild(descriptionP);
+    });
+
+    menuContainerDiv.appendChild(sectionH3);
+    menuContainerDiv.appendChild(sectionDiv);
   });
 
-  menuContainerDiv.appendChild(mainCourseSectionDiv);
   menuDiv.appendChild(menuContainerDiv);
 
   return menuDiv;
+}
+
+function renderMenu() {
+  const main = document.getElementById('main');
+  main.textContent = '';
+  main.appendChild(createMenu());
 }
 
 export default renderMenu;
