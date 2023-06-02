@@ -38,64 +38,43 @@ function createMenu() {
   const menuContainerDiv = document.createElement("div");
   menuContainerDiv.classList.add("menu-container");
 
-  const sections = [
-    {
-      title: "Main course",
-      items: menuItems.slice(0, 2),
-    },
-    {
-      title: "Soups & salads",
-      items: menuItems.slice(2, 4),
-    },
-    {
-      title: "Desserts",
-      items: menuItems.slice(4, 6),
-    },
-    {
-      title: "Drinks",
-      items: menuItems.slice(6, 8),
-    },
-  ];
+  const mainCourseH3 = document.createElement("h3");
+  mainCourseH3.classList.add("h-medium");
+  mainCourseH3.textContent = "Main course";
 
-  sections.forEach((section) => {
-    const sectionH3 = document.createElement("h3");
-    sectionH3.classList.add("h-medium");
-    sectionH3.textContent = section.title;
+  menuContainerDiv.appendChild(mainCourseH3);
 
-    const sectionDiv = document.createElement("div");
-    sectionDiv.classList.add("menu-section");
+  const mainCourseSectionDiv = document.createElement("div");
+  mainCourseSectionDiv.classList.add("menu-section");
 
-    section.items.forEach((menuItem) => {
-      const menuItemP = document.createElement("p");
-      menuItemP.classList.add("menu-item");
+  menuItems.forEach((menuItem) => {
+    const menuItemDiv = document.createElement("div");
+    menuItemDiv.classList.add("menu-item");
 
-      const itemNameSpan = document.createElement("span");
-      itemNameSpan.classList.add("item-name");
-      itemNameSpan.textContent = menuItem.title;
+    const itemNameSpan = document.createElement("span");
+    itemNameSpan.classList.add("item-name");
+    itemNameSpan.textContent = menuItem.title;
 
-      const itemDecoSpan = document.createElement("span");
-      itemDecoSpan.classList.add("item-deco");
+    const itemDecoSpan = document.createElement("span");
+    itemDecoSpan.classList.add("item-deco");
 
-      const priceSpan = document.createElement("span");
-      priceSpan.classList.add("price");
-      priceSpan.textContent = menuItem.price;
+    const priceSpan = document.createElement("span");
+    priceSpan.classList.add("price");
+    priceSpan.textContent = menuItem.price;
 
-      menuItemP.appendChild(itemNameSpan);
-      menuItemP.appendChild(itemDecoSpan);
-      menuItemP.appendChild(priceSpan);
+    menuItemDiv.appendChild(itemNameSpan);
+    menuItemDiv.appendChild(itemDecoSpan);
+    menuItemDiv.appendChild(priceSpan);
 
-      const descriptionP = document.createElement("p");
-      descriptionP.classList.add("description");
-      descriptionP.textContent = menuItem.description;
+    const descriptionP = document.createElement("p");
+    descriptionP.classList.add("description");
+    descriptionP.textContent = menuItem.description;
 
-      sectionDiv.appendChild(menuItemP);
-      sectionDiv.appendChild(descriptionP);
-    });
-
-    menuContainerDiv.appendChild(sectionH3);
-    menuContainerDiv.appendChild(sectionDiv);
+    mainCourseSectionDiv.appendChild(menuItemDiv);
+    mainCourseSectionDiv.appendChild(descriptionP);
   });
 
+  menuContainerDiv.appendChild(mainCourseSectionDiv);
   menuDiv.appendChild(menuContainerDiv);
 
   return menuDiv;
@@ -108,3 +87,4 @@ function renderMenu() {
 }
 
 export default renderMenu;
+
