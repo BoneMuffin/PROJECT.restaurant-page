@@ -17,70 +17,73 @@ const menuItems = [
     new MenuItem('Bellini', '$10', 'puréed white peaches + Prosecco')
 ];
 
-function createMenu() {
-    // adding title before displaying the menu
-    const menu = document.createElement('div');
-    menu.classList.add('menu');
-    
-    const menuHero = document.createElement('div');
-    menuHero.classList.add('hero');
-    menu.appendChild(menuHero);
-
-    const menuHeader = document.createElement('div');
-    menuHeader.classList.add('menu-header');
-    menu.appendChild(menuHeader);
-
-    const title = document.createElement('h1');
-    title.classList.add('h-large');
-    title.textContent = 'Menu';
-    menuHeader.appendChild(title);
-
-    // create the container for the menu
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menu-container');
-    menuContainer.appendChild(menu);
-
-    const menuTitle = document.createElement('h3');
-    menuTitle.classList.add('h-medium');
-    menuContainer.appendChild(menuTitle);
-
-    // create menu
-    menuItems.forEach(item => {
-      const itemContainer = document.createElement('div');
-      itemContainer.classList.add('menu-section');
-      menu.appendChild(itemContainer);
-
-      const itemText = document.createElement('div');
-      itemText.classList.add('menu-item');
-      itemContainer.appendChild(itemText);
-
-      const itemName = document.createElement('span');
-      itemName.classList.add('item-name');
-      itemText.appendChild(itemName);
-
-      const itemDeco = document.createElement('span');
-      itemDeco.classList.add('item-deco');
-      itemName.appendChild(itemDeco);
-
-      const itemPrice = document.createElement('span');
-      itemPrice.classList.add('price');
-      itemPrice.textContent = item.price;
-      itemName.appendChild(itemPrice);
-
-      const itemDescription = document.createElement('p');
-      itemDescription.classList.add('description');
-      itemDescription.textContent = item.description;
-      itemText.appendChild(itemDescription);
-    });
-
-    return menu
-};
-
 function renderMenu() {
-    const main = document.getElementById('main');
-    main.textContent = '';
-    main.appendChild(createMenu());
-};
-  
-export default renderMenu;
+  const main = document.getElementById('main');
+  main.textContent = '';
+  main.appendChild(createMenu());
+}
 
+function createMenu() {
+  const menuDiv = document.createElement("div");
+  menuDiv.classList.add("menu");
+
+  const heroDiv = document.createElement("div");
+  heroDiv.classList.add("hero");
+
+  const menuHeaderDiv = document.createElement("div");
+  menuHeaderDiv.classList.add("menu-header");
+
+  const h1 = document.createElement("h1");
+  h1.classList.add("h-large");
+  h1.textContent = "Menu";
+
+  menuHeaderDiv.appendChild(h1);
+  heroDiv.appendChild(menuHeaderDiv);
+  menuDiv.appendChild(heroDiv);
+
+  const menuContainerDiv = document.createElement("div");
+  menuContainerDiv.classList.add("menu-container");
+
+  const mainCourseH3 = document.createElement("h3");
+  mainCourseH3.classList.add("h-medium");
+  mainCourseH3.textContent = "Main course";
+
+  menuContainerDiv.appendChild(mainCourseH3);
+
+  const mainCourseSectionDiv = document.createElement("div");
+  mainCourseSectionDiv.classList.add("menu-section");
+
+  menuItems.forEach((menuItem) => {
+    const menuItemDiv = document.createElement("div");
+    menuItemDiv.classList.add("menu-item");
+
+    const itemNameSpan = document.createElement("span");
+    itemNameSpan.classList.add("item-name");
+    itemNameSpan.textContent = menuItem.title;
+
+    const itemDecoSpan = document.createElement("span");
+    itemDecoSpan.classList.add("item-deco");
+
+    const priceSpan = document.createElement("span");
+    priceSpan.classList.add("price");
+    priceSpan.textContent = menuItem.price;
+
+    menuItemDiv.appendChild(itemNameSpan);
+    menuItemDiv.appendChild(itemDecoSpan);
+    menuItemDiv.appendChild(priceSpan);
+
+    const descriptionP = document.createElement("p");
+    descriptionP.classList.add("description");
+    descriptionP.textContent = menuItem.description;
+
+    mainCourseSectionDiv.appendChild(menuItemDiv);
+    mainCourseSectionDiv.appendChild(descriptionP);
+  });
+
+  menuContainerDiv.appendChild(mainCourseSectionDiv);
+  menuDiv.appendChild(menuContainerDiv);
+
+  return menuDiv;
+}
+
+export default renderMenu;
