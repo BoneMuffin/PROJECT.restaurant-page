@@ -38,6 +38,7 @@ function createMenu() {
   menuContainerDiv.className = 'menu-container';
   menuDiv.appendChild(menuContainerDiv);
 
+  // create an array of menu sections
   const sections = [
     { title: 'Main course', items: menuItems.slice(0, 2) },
     { title: 'Soups & salads', items: menuItems.slice(2, 4) },
@@ -45,16 +46,19 @@ function createMenu() {
     { title: 'Drinks', items: menuItems.slice(6) },
   ];
 
+  // Create a heading for the section
   sections.forEach((section) => {
     const sectionHeader = document.createElement('h3');
     sectionHeader.className = 'h-medium';
     sectionHeader.textContent = section.title;
     menuContainerDiv.appendChild(sectionHeader);
 
+  // Create a div for the section's menu items
     const menuSectionDiv = document.createElement('div');
     menuSectionDiv.className = 'menu-section';
     menuContainerDiv.appendChild(menuSectionDiv);
 
+  // Iterate over each menu item in the section and create the necessary HTML structure
     section.items.forEach((item) => {
       const menuItemDiv = document.createElement('div');
       menuItemDiv.className = 'menu-item';
